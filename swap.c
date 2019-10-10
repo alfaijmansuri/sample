@@ -1,5 +1,11 @@
 #include <stdio.h> 
   
+def swap(*x,*y)
+{
+  int temp =x;
+  *x=*y;
+  *y=temp;
+}
 int main() 
 { 
     //hello world
@@ -9,9 +15,7 @@ int main()
     printf("\nEnter Value of y "); 
     scanf("%d", &y); 
   
-    int temp = x; 
-    x = y; 
-    y = temp; 
+    swap(&x,&y);
   
     printf("\nAfter Swapping: x = %d, y = %d", x, y); 
     return 0; 
